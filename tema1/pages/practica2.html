@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Refacciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de refacciones para motocicletas</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Agregar refacción</h2>
+            <form id="refaccion-form">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="motor">Motor</option>
+                    <option value="transmision">Transmisión</option>
+                    <option value="frenos">Frenos</option>
+                </select>
+                
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+                
+                <button type="submit">Agregar refacción</button>
+            </form>
+        </section>
+        
+        <section class="table-section">
+            <h2>Refacciones agregadas</h2>
+            <table id="refacciones-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="refacciones-body">
+                    <!-- Las refacciones agregadas aparecerán aquí -->
+                </tbody>
+            </table>
+            <button id="limpiar-btn">Limpiar tabla</button>
+        </section>
+    </main>
+
+    <script src="../js/practica2.js"></script>
+</body>
+</html>
