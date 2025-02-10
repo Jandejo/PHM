@@ -1,30 +1,24 @@
 {
   "refacciones": [
     {
-      "id": 1,
-      "marca": "abs",
-      "categoria": "frenos",
-      "precio": 100
-    },
-    {
-      "id": 3,
-      "marca": "ford",
-      "categoria": "motor",
-      "precio": 2000
-    },
-    {
-      "id": 4,
-      "marca": "superi",
-      "categoria": "motor",
-      "precio": "1212"
-    },
-    {
       "id": "9ae9",
       "nombre": "jsc",
       "marca": "adjcv",
       "categoria": "motor",
       "precio": "10",
       "stock": "1213"
+    },
+    {
+      "id": "9314",
+      "nombre": "asd",
+      "categoria": "Transmision",
+      "precio": "12"
+    },
+    {
+      "id": "6fdc",
+      "nombre": "asd",
+      "categoria": "Transmision",
+      "precio": "242"
     }
   ]
 }
