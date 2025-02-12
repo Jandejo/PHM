@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Refacciones</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <!-- Página de Inicio de Sesión -->
+  <div data-role="page" id="login-page">
+    <div data-role="header">
+      <h1>Iniciar Sesión</h1>
+    </div>
+    <div data-role="content">
+      <form id="login-form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit" data-role="button" data-theme="b">Iniciar Sesión</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Página Principal de Refacciones -->
+  <div data-role="page" id="main-page" style="display:none;">
+    <div data-role="header">
+      <h1>Listado de Refacciones</h1>
+      <button id="add-refaccion-button" data-role="button" data-theme="b">Agregar Refacción</button>
+    </div>
+    <div data-role="content">
+      <table id="refacciones-table" data-role="table" class="ui-responsive">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="refacciones-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Página para Agregar Refacciones -->
+  <div data-role="page" id="add-page" style="display:none;">
+    <div data-role="header">
+      <h1>Agregar Nueva Refacción</h1>
+    </div>
+    <div data-role="content">
+      <form id="add-refaccion-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria" required>
+          <option value="">Seleccione una categoría</option>
+          <option value="Motor">Motor</option>
+          <option value="Transmision">Transmisión</option>
+          <option value="Frenos">Frenos</option>
+        </select>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required />
+        <button type="submit" data-role="button" data-theme="b">Guardar Refacción</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para Editar Refacciones -->
+<div id="edit-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Editar Refacción</h2>
+    <form id="edit-refaccion-form">
+      <label for="edit-nombre">Nombre:</label>
+      <input type="text" id="edit-nombre" name="edit-nombre" required />
+      <label for="edit-categoria">Categoría:</label>
+      <select id="edit-categoria" name="edit-categoria" required>
+        <option value="Motor">Motor</option>
+        <option value="Transmision">Transmisión</option>
+        <option value="Frenos">Frenos</option>
+      </select>
+      <label for="edit-precio">Precio:</label>
+      <input type="number" id="edit-precio" name="edit-precio" required />
+      <button type="submit" data-role="button" data-theme="b">Actualizar Refacción</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- Incluir scripts -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./js/jscript.js"></script>
+</body>
+</html>
